@@ -5,29 +5,21 @@ function App() {
   const List = [];
   const [list, setList] = useState(List);
   const [name, setName] = useState('');
-  const [co, setco] = useState(0);
-
+  const [count, setcount] = useState(0);
   let id = 0;
-  // let count = 0;
-
 
   const InputName = (e) =>{
     setName(e.target.value);
   }
 
   const handleAdd = () =>{
-    const newList = list.concat({id , name , co});
+    const newList = list.concat({id , name , count});
     id++;
     setList(newList);
-
   }
 
   const deleting = () =>{
-    // const newList = list.remove({ name });
-    // setList(newList);
     document.getElementById(id).remove();
-
-
   }
 
   return (
@@ -37,7 +29,7 @@ function App() {
       <ul>
         {list.map((item) => (
           <li id={item.id}>{item.name}  <button onClick={deleting}>delete</button>    
-          <button onClick={()=> setco(++item.co)}>+</button> {item.co} <button onClick={()=> setco(--item.co)}>-</button></li>
+          <button onClick={()=> setcount(++item.count)}>+</button> {item.count} <button onClick={()=> setcount(--item.count)}>-</button></li>
         ))}
       </ul>
 
