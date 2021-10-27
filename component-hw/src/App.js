@@ -6,20 +6,15 @@ function App() {
   const [list, setList] = useState(List);
   const [name, setName] = useState('');
   const [count, setcount] = useState(0);
-  let id = 0;
 
   const InputName = (e) =>{
     setName(e.target.value);
   }
 
   const handleAdd = () =>{
-    const newList = list.concat({id , name , count});
-    id++;
+    const newList = list.concat({name , count});
+    console.log(newList);
     setList(newList);
-  }
-
-  const deleting = () =>{
-    document.getElementById(id).remove();
   }
 
   return (
@@ -28,13 +23,13 @@ function App() {
 
       <ul>
         {list.map((item) => (
-          <li id={item.id}>{item.name}  <button onClick={deleting}>delete</button>    
+          <li id={item.name}>{item.name}  <button onClick={()=> document.getElementById(item.name).remove()}>delete</button>    
           <button onClick={()=> setcount(++item.count)}>+</button> {item.count} <button onClick={()=> setcount(--item.count)}>-</button></li>
         ))}
       </ul>
 
       <h2>What needs to be done</h2>
-      <input type="text" onChange={InputName} value={name} /><button onClick={handleAdd}>Add</button>
+      <input type="text" onChange={InputName}/><button onClick={handleAdd}>Add</button>
     </div>
   );
 }
