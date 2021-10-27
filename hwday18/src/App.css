@@ -1,0 +1,9 @@
+.main{
+  text-align: center;
+  float: center;
+  border-radius: 2px;
+  border-color: black;
+  border-style: solid;
+  padding: 15px;
+  margin: 15px;
+}
