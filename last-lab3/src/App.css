@@ -22,6 +22,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  
 }
 
 .App-link {
@@ -36,3 +37,22 @@
     transform: rotate(360deg);
   }
 }
+
+
+.item{
+  display: flex;
+  align-items: center;
+
+}
+
+.del{
+  display: flex;
+  padding: 5px;
+  width: 300px;
+  align-items: center;
+  
+}
+
+ 
+
+
