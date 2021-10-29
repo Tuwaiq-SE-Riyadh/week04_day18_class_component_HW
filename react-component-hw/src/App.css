@@ -1,0 +1,17 @@
+.forPadding{
+  padding: 1rem;
+}
+
+.page{
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  padding:  1rem;
+
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+}
