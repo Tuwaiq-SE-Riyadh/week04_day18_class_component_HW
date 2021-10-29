@@ -1,0 +1,26 @@
+.todo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
+.item{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  column-gap: 20px;
+}
+.count{
+  display: flex;
+  flex-direction: column;
+}
+input{
+  height: 20px;
+}
+.allItem{
+  row-gap: 150px;
+}
