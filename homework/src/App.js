@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import List from "./components/List";
 
 function App() {
+  const [text, setText] = useState()
+  const [list, setList] = useState([
+    { text: "First Todo" },
+  ]);
+
+
+
+  const addItem = (e) => {
+    const item = { text };
+    // const item = { text:text}
+    const array = list.slice()
+    array.push(item);
+    setList(array)
+  };
+
+  const changeText = (e) => {
+    const value = e.target.value;
+    setText(value)
+  };
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <List list={list} setList={setList}/>
+      <input type="text" onChange={changeText} />
+      <button onClick={addItem}>Add</button>
     </div>
   );
 }
