@@ -1,0 +1,11 @@
+.btnDelete, .btnInc{
+    margin-left: 15px;
+}
+
+.btnDec,.count{
+    margin-left: 140px;
+}
+.flex{
+    margin-top: 60px;
+}
+
