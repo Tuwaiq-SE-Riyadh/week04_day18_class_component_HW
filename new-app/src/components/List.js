@@ -7,7 +7,6 @@ function List({ list, setList }) {
         return (
           <ListItem
             setList={setList}
-            number={element.number}
             text={element.text}
             index={index}
             key={index}

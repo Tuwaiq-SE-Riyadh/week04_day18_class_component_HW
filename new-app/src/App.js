@@ -3,17 +3,17 @@ import "./App.css";
 import List from "./components/List";
 
 function App() {
-  const [number, setNumber] = useState()
+
   const [text, setText] = useState()
   const [list, setList] = useState([
-    { number: 10, text: "abcd" },
-    { number: 20, text: "abcd" },
-    { number: 30, text: "abcd" }
+    {  text: "Eat" },
+    {  text: "Cpde" },
+    {  text: "Sleep" }
   ]);
  
 
   const addItem = (e) => {
-    const item = { number, text };
+    const item = { text };
     const array = list.slice()
     array.push(item);
     setList(array)
@@ -24,16 +24,13 @@ function App() {
     setText(value)
   };
 
-  const changeNumber = (e) => {
-    const value = e.target.value;
-    setNumber(value)
-  };
+
 
   return (
     <div className="form">
       <List list={list} setList={setList}/>
       <div className="add">
-        <input type="number"  onChange={changeNumber} />
+        <lable> What needs to do done</lable>
         <input type="text"  onChange={changeText} />
         <button onClick={addItem}>Add</button>
       </div>

@@ -27,12 +27,11 @@ function ListItem({ number, text, setList, index }) {
   return (
     <>
       <div className="flex">
-        <p> {number}</p>
         <p> {text}</p>
         <p> {count}</p>
         <button onClick={deleteListItem}>Delete</button>
-        <button onClick={inc}>increases + </button>
-        <button onClick={dec}>decreases - </button>
+        <button onClick={inc}> + </button>
+        <button onClick={dec}> - </button>
       </div>
     </>
   );
